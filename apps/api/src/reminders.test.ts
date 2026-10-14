@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
 import { after, test } from "node:test";
-import { buildApp } from "./app";
+import { buildApp } from "./routes";
 import { setTelegramSender } from "./notify";
 import { prisma } from "./prisma";
 import { runReminders } from "./reminders";

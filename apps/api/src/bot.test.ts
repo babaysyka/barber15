@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
 import { after, test } from "node:test";
 import type { Update } from "@grammyjs/types";
-import { buildApp } from "./app";
+import { buildApp } from "./routes";
 import { getBot, resetBot } from "./bot";
 import { issueBarberLink } from "./links";
 import { notifyBookingChange, setTelegramSender } from "./notify";

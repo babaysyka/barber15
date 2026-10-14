@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { after, test } from "node:test";
-import { buildApp } from "./app";
+import { buildApp } from "./routes";
 import { prisma } from "./prisma";
 import { dateKeyInZone, zonedTimeToUtc } from "./slots";
 

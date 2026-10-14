@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
 import { after, test } from "node:test";
-import { buildApp } from "./app";
+import { buildApp } from "./routes";
 import { resetLoginLimits } from "./adminAuth";
 import { hashPassword } from "./password";
 import { prisma } from "./prisma";
