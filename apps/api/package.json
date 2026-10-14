@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "postinstall": "node ./scripts/generate-client.mjs",
     "dev": "node --env-file=../../.env ../../node_modules/tsx/dist/cli.mjs watch src/index.ts",
     "start": "node --env-file=../../.env ../../node_modules/tsx/dist/cli.mjs src/index.ts",
     "lint": "tsc --noEmit",
@@ -16,6 +17,7 @@
     "@grammyjs/types": "3.22.2",
     "grammy": "^1.38.4",
     "hash-wasm": "^4.12.0",
+    "prisma": "^6.19.3",
     "zod": "^3.25.76"
   },
   "devDependencies": {
