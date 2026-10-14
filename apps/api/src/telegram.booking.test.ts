@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { after, test } from "node:test";
-import { buildApp } from "./routes";
-import { prisma } from "./prisma";
-import { signInitData } from "./telegram";
+import { buildApp } from "./routes.js";
+import { prisma } from "./prisma.js";
+import { signInitData } from "./telegram.js";
 
 const token = "123456:stage6-booking";
 const phone = "+998901110201";

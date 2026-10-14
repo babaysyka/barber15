@@ -1,10 +1,10 @@
 import { randomBytes, randomUUID } from "node:crypto";
 import { Prisma } from "@prisma/client";
-import { ApiError } from "./errors";
-import { notifyBookingChange, telegramStartUrl } from "./notify";
-import { prisma } from "./prisma";
-import { horizonDates, labelInZone, loadSettings, mergeSlots, offersFor, slotsByDate, slotsForOffers, type Offer, type Settings } from "./schedule";
-import { canChangeAt, dateKeyInZone, type Slot } from "./slots";
+import { ApiError } from "./errors.js";
+import { notifyBookingChange, telegramStartUrl } from "./notify.js";
+import { prisma } from "./prisma.js";
+import { horizonDates, labelInZone, loadSettings, mergeSlots, offersFor, slotsByDate, slotsForOffers, type Offer, type Settings } from "./schedule.js";
+import { canChangeAt, dateKeyInZone, type Slot } from "./slots.js";
 
 export function normalizePhone(value: string): string | null {
   const digits = value.replace(/\D/g, "");

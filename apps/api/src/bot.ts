@@ -1,10 +1,10 @@
 import type { Update } from "@grammyjs/types";
 import { Bot, InlineKeyboard, Keyboard, type Context } from "grammy";
-import { ApiError } from "./errors";
-import { consumeBarberLink } from "./links";
-import { cancelBooking, listMyBookings } from "./bookings";
-import { prisma } from "./prisma";
-import { visitLabel } from "./notify";
+import { ApiError } from "./errors.js";
+import { consumeBarberLink } from "./links.js";
+import { cancelBooking, listMyBookings } from "./bookings.js";
+import { prisma } from "./prisma.js";
+import { visitLabel } from "./notify.js";
 
 const menu = new Keyboard().text("Записаться").text("Мои записи").resized().persistent();
 

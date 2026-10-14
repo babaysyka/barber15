@@ -2,11 +2,11 @@ import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
 import { after, test } from "node:test";
 import type { Update } from "@grammyjs/types";
-import { buildApp } from "./routes";
-import { getBot, resetBot } from "./bot";
-import { issueBarberLink } from "./links";
-import { notifyBookingChange, setTelegramSender } from "./notify";
-import { prisma } from "./prisma";
+import { buildApp } from "./routes.js";
+import { getBot, resetBot } from "./bot.js";
+import { issueBarberLink } from "./links.js";
+import { notifyBookingChange, setTelegramSender } from "./notify.js";
+import { prisma } from "./prisma.js";
 
 const phone = "+998901110301";
 const token = "123456:stage7";

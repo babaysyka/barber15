@@ -8,7 +8,7 @@ import {
   retentionReport,
   revenueReport,
   servicesReport,
-} from "./analytics";
+} from "./analytics.js";
 import {
   addPortfolio,
   adminAvailability,
@@ -34,7 +34,7 @@ import {
   saveSchedule,
   saveSettings,
   uploadImage,
-} from "./admin";
+} from "./admin.js";
 import {
   adminFromCookie,
   assertLoginAllowed,
@@ -43,10 +43,10 @@ import {
   noteLoginSuccess,
   sessionCookie,
   signSession,
-} from "./adminAuth";
-import { ApiError } from "./errors";
-import { verifyPassword } from "./password";
-import { prisma } from "./prisma";
+} from "./adminAuth.js";
+import { ApiError } from "./errors.js";
+import { verifyPassword } from "./password.js";
+import { prisma } from "./prisma.js";
 
 const slug = z.string().regex(/^[a-z0-9-]{2,32}$/);
 const clock = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/);

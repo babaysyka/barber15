@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { after, test } from "node:test";
-import { buildApp } from "./routes";
-import { prisma } from "./prisma";
-import { dateKeyInZone, zonedTimeToUtc } from "./slots";
+import { buildApp } from "./routes.js";
+import { prisma } from "./prisma.js";
+import { dateKeyInZone, zonedTimeToUtc } from "./slots.js";
 
 const phones = ["+998900000091", "+998900000092", "+998900000093"];
 

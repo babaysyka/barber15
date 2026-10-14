@@ -1,6 +1,6 @@
-import { prisma } from "./prisma";
-import { loadSettings } from "./schedule";
-import { clockLabel, dateKeyInZone } from "./slots";
+import { prisma } from "./prisma.js";
+import { loadSettings } from "./schedule.js";
+import { clockLabel, dateKeyInZone } from "./slots.js";
 
 export type TelegramSender = (chatId: string, text: string) => Promise<void>;
 

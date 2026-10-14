@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
-import { ApiError } from "./errors";
+import { ApiError } from "./errors.js";
 
 export type TelegramUser = {
   id: string;

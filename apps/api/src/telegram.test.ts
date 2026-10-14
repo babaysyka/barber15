@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { ApiError } from "./errors";
-import { signInitData, verifyInitData } from "./telegram";
+import { ApiError } from "./errors.js";
+import { signInitData, verifyInitData } from "./telegram.js";
 
 const token = "123456:stage6-test";
 const now = Date.parse("2026-10-05T10:00:00.000Z");

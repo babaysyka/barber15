@@ -1,11 +1,11 @@
 import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
 import { after, test } from "node:test";
-import { buildApp } from "./routes";
-import { resetLoginLimits } from "./adminAuth";
-import { hashPassword } from "./password";
-import { prisma } from "./prisma";
-import { isoWeekday, zonedTimeToUtc } from "./slots";
+import { buildApp } from "./routes.js";
+import { resetLoginLimits } from "./adminAuth.js";
+import { hashPassword } from "./password.js";
+import { prisma } from "./prisma.js";
+import { isoWeekday, zonedTimeToUtc } from "./slots.js";
 
 const login = "stage10";
 const password = "stage10-pass";

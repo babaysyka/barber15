@@ -1,7 +1,7 @@
-import { ApiError } from "./errors";
-import { prisma } from "./prisma";
-import { loadSettings } from "./schedule";
-import { clockLabel, dateKeyInZone, dayOffset, isoWeekday, zonedTimeToUtc } from "./slots";
+import { ApiError } from "./errors.js";
+import { prisma } from "./prisma.js";
+import { loadSettings } from "./schedule.js";
+import { clockLabel, dateKeyInZone, dayOffset, isoWeekday, zonedTimeToUtc } from "./slots.js";
 
 export type Period = {
   from: string;

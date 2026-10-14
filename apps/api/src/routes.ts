@@ -3,13 +3,13 @@ import cors from "@fastify/cors";
 import Fastify, { type FastifyInstance } from "fastify";
 import type { Update } from "@grammyjs/types";
 import { ZodError, z } from "zod";
-import { getBot } from "./bot";
-import { cancelBooking, createBooking, listDays, listMyBookings, listSlots, readBooking, rescheduleBooking } from "./bookings";
-import { ApiError } from "./errors";
-import { registerAdmin } from "./adminRoutes";
-import { prisma } from "./prisma";
-import { runReminders } from "./reminders";
-import { verifyInitData } from "./telegram";
+import { getBot } from "./bot.js";
+import { cancelBooking, createBooking, listDays, listMyBookings, listSlots, readBooking, rescheduleBooking } from "./bookings.js";
+import { ApiError } from "./errors.js";
+import { registerAdmin } from "./adminRoutes.js";
+import { prisma } from "./prisma.js";
+import { runReminders } from "./reminders.js";
+import { verifyInitData } from "./telegram.js";
 
 const serviceSelect = {
   id: true,

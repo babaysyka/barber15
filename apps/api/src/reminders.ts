@@ -1,7 +1,7 @@
 import { Prisma } from "@prisma/client";
-import { sendTelegram } from "./notify";
-import { prisma } from "./prisma";
-import { clockLabel, dateKeyInZone } from "./slots";
+import { sendTelegram } from "./notify.js";
+import { prisma } from "./prisma.js";
+import { clockLabel, dateKeyInZone } from "./slots.js";
 
 type Db = Prisma.TransactionClient | typeof prisma;
 

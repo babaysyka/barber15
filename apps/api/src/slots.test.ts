@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { canChangeAt, computeSlots, type SlotQuery } from "./slots";
+import { canChangeAt, computeSlots, type SlotQuery } from "./slots.js";
 
 const TZ = "Asia/Tashkent";
 

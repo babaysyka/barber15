@@ -1,8 +1,8 @@
 import Fastify from "fastify";
-import { ensureAdmin } from "./adminAuth";
-import { registerRoutes } from "./routes";
-import { installMenu } from "./bot";
-import { prisma } from "./prisma";
+import { ensureAdmin } from "./adminAuth.js";
+import { registerRoutes } from "./routes.js";
+import { installMenu } from "./bot.js";
+import { prisma } from "./prisma.js";
 
 const app = Fastify({ logger: true, bodyLimit: 4 * 1024 * 1024 });
 registerRoutes(app);

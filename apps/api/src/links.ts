@@ -1,5 +1,5 @@
 import { randomBytes } from "node:crypto";
-import { prisma } from "./prisma";
+import { prisma } from "./prisma.js";
 
 const DAY = 24 * 60 * 60 * 1000;
 

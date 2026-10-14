@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import { after, test } from "node:test";
-import { buildApp } from "./routes";
-import { resetLoginLimits } from "./adminAuth";
-import { hashPassword } from "./password";
-import { prisma } from "./prisma";
+import { buildApp } from "./routes.js";
+import { resetLoginLimits } from "./adminAuth.js";
+import { hashPassword } from "./password.js";
+import { prisma } from "./prisma.js";
 
 const login = "stage9";
 const password = "stage9-pass";

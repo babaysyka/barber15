@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
 import { after, test } from "node:test";
-import { buildApp } from "./routes";
-import { setTelegramSender } from "./notify";
-import { prisma } from "./prisma";
-import { runReminders } from "./reminders";
+import { buildApp } from "./routes.js";
+import { setTelegramSender } from "./notify.js";
+import { prisma } from "./prisma.js";
+import { runReminders } from "./reminders.js";
 
 const phone = "+998901110801";
 const silentPhone = "+998901110802";

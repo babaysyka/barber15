@@ -1,8 +1,8 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { readFileSync } from "node:fs";
-import { ApiError } from "./errors";
-import { hashPassword } from "./password";
-import { prisma } from "./prisma";
+import { ApiError } from "./errors.js";
+import { hashPassword } from "./password.js";
+import { prisma } from "./prisma.js";
 
 const COOKIE = "polosa_admin";
 const WEEK = 14 * 24 * 60 * 60;

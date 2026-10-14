@@ -1,5 +1,5 @@
-import { prisma } from "./prisma";
-import { clockLabel, computeSlots, dateKeyInZone, isoWeekday, zonedTimeToUtc, type Range, type Slot } from "./slots";
+import { prisma } from "./prisma.js";
+import { clockLabel, computeSlots, dateKeyInZone, isoWeekday, zonedTimeToUtc, type Range, type Slot } from "./slots.js";
 
 export type Settings = {
   timeZone: string;

@@ -1,11 +1,11 @@
 import { randomBytes } from "node:crypto";
 import { Prisma, type BookingStatus, type TimeOffType } from "@prisma/client";
-import { createBooking, isSlotTaken, listSlots, pickOffer, requireOffers } from "./bookings";
-import { ApiError } from "./errors";
-import { notifyBookingChange } from "./notify";
-import { prisma } from "./prisma";
-import { labelInZone, loadSettings } from "./schedule";
-import { dateKeyInZone, zonedTimeToUtc } from "./slots";
+import { createBooking, isSlotTaken, listSlots, pickOffer, requireOffers } from "./bookings.js";
+import { ApiError } from "./errors.js";
+import { notifyBookingChange } from "./notify.js";
+import { prisma } from "./prisma.js";
+import { labelInZone, loadSettings } from "./schedule.js";
+import { dateKeyInZone, zonedTimeToUtc } from "./slots.js";
 
 const slug = /^[a-z0-9-]{2,32}$/;
 const clock = /^([01]\d|2[0-3]):[0-5]\d$/;
