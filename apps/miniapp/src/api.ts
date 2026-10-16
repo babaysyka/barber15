@@ -49,7 +49,9 @@ export function initData(): string {
 }
 
 function requestUrl(path: string) {
-  const configured = import.meta.env.VITE_API_URL?.trim().replace(/\/+$/, "");
+  const configured = (import.meta.env.VITE_API_URL || (import.meta.env.PROD ? "https://barber15-mu.vercel.app" : ""))
+    .trim()
+    .replace(/\/+$/, "");
   if (!configured) {
     return path;
   }

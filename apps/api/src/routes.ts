@@ -59,11 +59,12 @@ export function registerRoutes(app: FastifyInstance) {
     ...new Set(
       [
           ...(process.env.CORS_ORIGIN ?? "http://localhost:3000").split(","),
+          process.env.MINIAPP_URL ?? "",
           "http://localhost:3000",
           "http://localhost:3010",
           "http://localhost:5173",
         ]
-        .map((item) => item.trim())
+        .map((item) => item.trim().replace(/\/+$/, ""))
         .filter(Boolean),
     ),
   ];

@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node ../../node_modules/vite/bin/vite.js",
-    "build": "node ../../node_modules/typescript/lib/tsc.js --noEmit && node ../../node_modules/vite/bin/vite.js build",
-    "lint": "node ../../node_modules/typescript/lib/tsc.js --noEmit"
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@twa-dev/sdk": "^8.0.2",

@@ -6,7 +6,20 @@ import { cancelBooking, listMyBookings } from "./bookings.js";
 import { prisma } from "./prisma.js";
 import { visitLabel } from "./notify.js";
 
-const menu = new Keyboard().text("Записаться").text("Мои записи").resized().persistent();
+function miniAppUrl() {
+  return (process.env.MINIAPP_URL ?? "").trim().replace(/\/+$/, "");
+}
+
+function replyMenu() {
+  const url = miniAppUrl();
+  const keyboard = new Keyboard();
+  if (url) {
+    keyboard.webApp("Записаться", url);
+  } else {
+    keyboard.text("Записаться");
+  }
+  return keyboard.text("Мои записи").resized().persistent();
+}
 
 let bot: Bot | null = null;
 let botToken = "";
@@ -104,10 +117,17 @@ export function createBot(token: string) {
       return;
     }
 
-    await ctx.reply("Полоса. Здесь можно посмотреть записи и открыть новую.", { reply_markup: menu });
+    await ctx.reply("Полоса. Здесь можно посмотреть записи и открыть новую.", { reply_markup: replyMenu() });
   });
 
   next.hears("Записаться", async (ctx) => {
+    const mini = miniAppUrl();
+    if (mini) {
+      await ctx.reply("Новая запись открывается в приложении.", {
+        reply_markup: new InlineKeyboard().webApp("Записаться", mini),
+      });
+      return;
+    }
     const appUrl = process.env.APP_URL ?? "http://localhost:3000";
     await ctx.reply("Новая запись открывается на сайте.", {
       reply_markup: new InlineKeyboard().url("Открыть запись", `${appUrl}/book`),
@@ -157,6 +177,12 @@ export async function installMenu() {
     { command: "start", description: "Начать" },
     { command: "bookings", description: "Мои записи" },
   ]);
+  const mini = miniAppUrl();
+  if (mini) {
+    await current.api.setChatMenuButton({
+      menu_button: { type: "web_app", text: "Записаться", web_app: { url: mini } },
+    });
+  }
 }
 
 export async function handleTelegramUpdate(update: Update) {
